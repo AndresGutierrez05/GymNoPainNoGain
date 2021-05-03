@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "f97c2f5d-a7a5-4195-bf48-6b3a037fd722",
+		"name": "NoPainNoGain",
+		"description": "Queries to GYM API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"leal1577@hotmail.com\",\r\n    \"password\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Camilo\",\r\n    \"lastName\" : \"Rey\",\r\n    \"IdSite\" : 1,\r\n    \"email\" : \"abcd@hotmail.com\",\r\n    \"password\" : \"123\",\r\n    \"idGenre\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register city",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxlYWwxNTc3QGhvdG1haWwuY29tIiwiaWF0IjoxNjIwMDUwMzQwLCJleHAiOjE2MjAwNTIxNDB9.QskSmr5j0E1418zSx698cErRuS9ur95AgE9Gtx_qNRE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\" : \"Manizales\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Site",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxlYWwxNTc3QGhvdG1haWwuY29tIiwiaWF0IjoxNjIwMDUwMzQwLCJleHAiOjE2MjAwNTIxNDB9.QskSmr5j0E1418zSx698cErRuS9ur95AgE9Gtx_qNRE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"La avenidscva\",\r\n    \"address\" : \"Carrera 14 b sur # 15 - 15\",\r\n    \"idCity\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/site",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"site"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users By Site",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxlYWwxNTc3QGhvdG1haWwuY29tIiwiaWF0IjoxNjIwMDUwMzQwLCJleHAiOjE2MjAwNTIxNDB9.QskSmr5j0E1418zSx698cErRuS9ur95AgE9Gtx_qNRE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/site/getUsersBySite/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"site",
+						"getUsersBySite",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
